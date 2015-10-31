@@ -14,5 +14,8 @@ In Short, wikipedia for blind. wikipedia using speech. Sounds cool, isn't it?
 "When your senses work in sync you can do wonders."
 
 This repository for those enthusiasts who want changes in my website or want to create something on their own.
+The project is python-django based. It uses JavaScript to for speech-text-speech conversion.
+
+<B>We do not store any search result.</B>
 
 If you want to use website directly- https://vaibhawlabs.pythonanywhere.com/
