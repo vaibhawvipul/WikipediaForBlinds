@@ -1,4 +1,5 @@
 # WikipediaForBlinds
+<b>Wikipedia for Blinds</b>
 This website allows blind users to get a summary of wikipedia article by speech-text-speech format.
 
 In the Era of technology, blindness in no way should create barrier for people who want education. 
