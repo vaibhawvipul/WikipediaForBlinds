@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+        {% load staticfiles %}
+        <head>
+
+            <meta charset="utf-8">
+            <title>VaibhawLabs</title>
+            <style>
+            .Button {
+    background: #FFCC02;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #585858;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-shadow: 1px 1px 1px #FFE477;
+    font-weight: bold;
+    font-size:250px;
+    box-shadow: 1px 1px 1px #3D3D3D;
+    -webkit-box-shadow:1px 1px 1px #3D3D3D;
+    -moz-box-shadow:1px 1px 1px #3D3D3D;
+    width:100%;
+    height:500px;
+}
+
+ .Button:hover {
+    color: #333;
+    background-color: red;
+}
+
+            </style>
+        </head>
+
+        <body>
+            <h1 id = "heading">Welcome</h1> <a href="/logout/" onclick="Stop()"; >Logout</a><br />
+                <p id="text-to-speech">{{ text }}</p>
+                <script>var su = new SpeechSynthesisUtterance();
+            su.lang = "en";
+            su.text = document.getElementById('text-to-speech').textContent;
+            su.rate=0.7;
+            su.volume = 10;
+            speechSynthesis.speak(su);
+            function Stop() {
+               speechSynthesis.cancel();
+            }
+            </script>
+            <script type="text/javascript">
+            <!--
+            function Redirect() {
+               window.location="https://vaibhawlabs.pythonanywhere.com/new/";
+               speechSynthesis.cancel();
+            }
+            //-->
+            </script>
+            <script>
+            onkeydown = function() {Pause()};
+            onkeyup = function() {Resume()};
+
+            function Pause() {
+               speechSynthesis.pause();
+            }
+            function Resume() {
+               speechSynthesis.resume();
+            }
+        </script>
+            <input type="button" value="ASK AGAIN" class = "Button" onclick="Redirect();" />
+        </body>
+
+</html>
