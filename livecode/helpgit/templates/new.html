@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            {% load staticfiles %}
+
+            <meta charset="utf-8">
+            <title>VaibhawLabs</title>
+            <link rel="stylesheet" href="home/vaibhawlabs/livecode/livecode/helpgit/templates/speech-input.css">
+            <style>
+                /* Elegant Aero */
+.elegant-aero {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.elegant-aero input[type="text"], .elegant-aero input[type="email"], .elegant-aero textarea, .elegant-aero select {
+    color: #888;
+    width: 90%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 32px/25px Arial, Helvetica, sans-serif;
+    height: 100px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+.elegant-aero .button{
+    padding: 10px 30px 10px 30px;
+    background: #66C1E4;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px #4C6E91;
+    -webkit-box-shadow: 1px 1px 1px #4C6E91;
+    -moz-box-shadow: 1px 1px 1px #4C6E91;
+    text-shadow: 1px 1px 1px #5079A3;
+
+}
+.elegant-aero .button:hover{
+    background: #3EB1DD;
+}
+
+#heading{
+    text-align:center;
+}
+
+
+            </style>
+        </head>
+
+        <body>
+            <h1 id = "heading">Welcome</h1> <a id = "logout" href="/logout/">Logout</a><br />
+                <form action="/search/" method="get" class="elegant-aero">
+                    <input type="text" name="q" id="results" />
+                    <input type="submit" value="Search">
+                </form>
+            <script>var su = new SpeechSynthesisUtterance();
+            su.lang = "en";
+            su.text = "Welcome! What can I search for you? ";
+            su.rate = 1;
+            su.volume = 5;
+            speechSynthesis.speak(su);
+            </script>
+            <script>
+            var recognition = new webkitSpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+
+            recognition.onresult = function (e) {
+            var forminput = document.getElementById('results');
+            for (var i = e.resultIndex; i < e.results.length; ++i) {
+            if (e.results[i].isFinal) {
+                forminput.value += e.results[i][0].transcript;
+                    }
+                results.form.submit();
+                }
+            }
+
+            // start listening
+            recognition.start();
+
+            </script>
+        </body>
+
+</html>
