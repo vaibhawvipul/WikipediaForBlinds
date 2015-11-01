@@ -1,6 +1,8 @@
 # WikipediaForBlinds
 This website allows blind users to get a summary of wikipedia article by speech-text-speech format.
 
+<B>The code is released under GNU General Public License V2. Though, It has components webkit which is released under BSD-form license. Speech Recognition is performed on the server not locally on browser.</B>
+
 In the Era of technology, blindness in no way should create barrier for people who want education. 
 
 They have everything with them, determination, optimism, focus then why should they lack access to knowledge?
