@@ -16,7 +16,7 @@ In Short, <b>Wikipedia for Blinds</b>. wikipedia using speech. Sounds cool, isn'
 "When your senses work in sync you can do wonders."
 
 This repository for those enthusiasts who want changes in my website or want to create something on their own.
-The project is python-django based. It uses JavaScript to for speech-text-speech conversion.
+The project is python-django based. It uses JavaScript to for speech-text-speech conversion. It also uses wikipedia python api.
 
 <B>We do not store any search result.</B>
 
