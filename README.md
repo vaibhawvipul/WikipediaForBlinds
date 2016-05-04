@@ -13,7 +13,7 @@ It will start taking input through microphone It converts speech to text and sea
 It renders back the information and speaks it back. If Article is unavailable on wikipedia, It will ask you to speak again.
 
 In Short, <b>Wikipedia for Blinds</b>. wikipedia using speech. Sounds cool, isn't it? 
-"When your senses work in sync you can do wonders."
+"When your senses work in sync one can do wonders."
 
 This repository for those enthusiasts who want changes in my website or want to create something on their own.
 The project is python-django based. It uses JavaScript to for speech-text-speech conversion. It also uses wikipedia python api.
