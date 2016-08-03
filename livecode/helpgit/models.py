@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 import os
 
 class UserProfile(models.Model):
+	""" 
+	Model for the users which we have.
+    """
     user = models.OneToOneField(User)
     Institution = models.CharField(max_length=128,blank=False)
     City = models.CharField(max_length=128,blank=True)
