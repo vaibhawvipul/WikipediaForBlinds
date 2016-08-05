@@ -11,6 +11,12 @@ from django.core.urlresolvers import reverse
 from livecode.helpgit.forms import UserForm, UserProfileForm
 
 def user_login(request):
+
+    """
+    Function for handling authentication of a user
+    :param request object.
+    """
+
     if request.method =="POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -28,7 +34,12 @@ def user_login(request):
         return render(request, 'login.html')
 
 def files(request):
-    # Handle file upload
+    
+    """ 
+    Function for handling file upload.
+    :param request object.
+    """
+
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
@@ -57,6 +68,12 @@ def about(request):
     return render(request,'about.html')
 
 def search(request):
+
+    """
+    Function for searching over wikipedia.
+    :param request object.
+    """
+
     suicide_list = ["How to commit suicide", "how to commit suicide","I want to commit suicide", "i want to commit suicide", "I don't want to live", "i don't want to live", "I don't want to live anymore","i don't want to live anymore", "I want to die", "i want to die"]
     if 'q' in request.GET:
         if request.GET['q'] in suicide_list:
@@ -78,6 +95,12 @@ def search(request):
                 return redirect ('https://vaibhawlabs.pythonanywhere.com/new/')
 
 def register(request):
+
+    """
+    Function for handling registration.
+    :param request object.
+    """
+
     registered = False
     if request.method=="POST":
         user_form = UserForm(data=request.POST)
